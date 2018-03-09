@@ -43,7 +43,9 @@ def winner(board)
   if  WIN_COMBINATIONS.detect do |combo|
      board[combo[0]] == "X" && board[combo[1]] == "X" && board[combo[2]] == "X" 
      return "X"
-    end 
+    WIN_COMBINATIONS.detect do |combo|
+     board[combo[0]] == "O" && board[combo[1]] == "O" && board[combo[2]] == "O" 
+     return "O"
     
   else 
     return nil
